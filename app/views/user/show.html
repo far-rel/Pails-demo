@@ -1,8 +1,6 @@
-<html>
-<title>
-Pails test project
-</title>
-<body>
- Welcome User!
-</body>
-</html>
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+ Welcome User! <br />
+ Echo: {{ echo }}
+{% endblock %}
