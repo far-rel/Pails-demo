@@ -3,4 +3,7 @@ from Pails.core.controllers import BaseController
 class UserController(BaseController):
     
     def show(self):
-        self._set_render_parameters({ 'echo' : str(self._params) })
+        self.render(params = { 'echo' : str(self._params) })
+
+    def new(self):
+        self.redirect(self.path.account())
