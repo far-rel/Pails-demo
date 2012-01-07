@@ -2,6 +2,7 @@ from Pails.core.routes import Route
 
 r = Route()
 account = r.resource('account', controller = 'user')
+r.root('user', 'new')
 
 #news = account.resources('news', only = 'show')
 #comments = news.resources('comments',  without = ['destroy'])
