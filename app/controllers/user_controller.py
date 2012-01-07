@@ -7,9 +7,10 @@ class UserController(BaseController):
             self.session['count'] = int(self.session['count']) + 1
         else:
             self.session['count'] = 1
-        self.render(params = { 'echo' : str(self._params) + ' Cookie: ' + str(self.cookies['user'] + 'Count: ' + str(self.session['count'] ))})
+        self.render(params = { 'echo' : str(self._params) + ' Cookie: ' + str(self.cookies['user']) + ' Count: ' + str(self.session['count'])})
 
     def new(self):
+        del self.session['count']
         self.redirect(self.path.account())
 
     def edit(self):
